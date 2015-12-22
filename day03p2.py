@@ -4,7 +4,7 @@ with open('input/day03.txt') as fh:
     data = fh.read()
 
 starting_location = (0, 0)
-visited_locations = set((0, 0))
+visited_locations = set(((0, 0),))
 pos_change = {
     '^': (0, 1),
     'v': (0, -1),
@@ -25,4 +25,4 @@ for idx, char in enumerate(data):
                          curr_robo_pos[1] + pos_change[char][1])
         visited_locations.add(curr_robo_pos)
 
-print len(visited_locations)-1  # A '0' is being added to set, no idea why yet
+print len(visited_locations)

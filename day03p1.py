@@ -4,7 +4,7 @@ with open('input/day03.txt') as fh:
     data = fh.read()
 
 starting_location = (0, 0)
-visited_locations = set((0, 0))
+visited_locations = set(((0, 0),))
 pos_change = {
     '^': (0, 1),
     'v': (0, -1),
