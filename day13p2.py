@@ -34,6 +34,14 @@ for line in data:
     person2_index = people.index(person2)
     happiness[(person1_index, person2_index)] = units
 
+people.append('me')
+my_index = people.index('me')
+
+for person in people:
+    person_index = people.index(person)
+    happiness[(my_index, person_index)] = 0
+    happiness[(person_index, my_index)] = 0
+
 for order in permutations(range(len(people))):
     total_happiness = 0
 
